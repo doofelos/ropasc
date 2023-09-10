@@ -1,3 +1,5 @@
+//NEED TO CLEAN UP/MAKE MORE CONCISE (use arrays for choices)(consolidate outcomes ${})
+
 let playerWin = 0;
 let cpuWin = 0;
 
@@ -5,9 +7,9 @@ function playGame(){
 
 function getComputerChoice() {
 
-    const a = 'Rock';
-    const b = 'Paper';
-    const c = 'Scissors';
+    const a = 'rock';
+    const b = 'paper';
+    const c = 'scissors';
     const d = Math.random()
 
     if (d <= .33) {
@@ -25,44 +27,36 @@ function rockPaperScissor(playerSelection, computerSelection) {
 
     let playerInput = playerSelection;
 
-    if (playerInput === "rock" & computerSelection === "Rock") {
+    if (playerInput == computerSelection) {
         return ("It's a tie!");
     }
 
-    else if (playerInput === "paper" & computerSelection === "Paper") {
-        return ("It's a tie!");
-    }
-
-    else if (playerInput === "scissors" & computerSelection === "Scissors") {
-        return ("It's a tie!");
-    }
-
-    else if (playerInput === "rock" & computerSelection === "Scissors") {
+    else if (playerInput === "rock" & computerSelection === "scissors") {
         playerWin++;
         return ("You win! Rock beats Scissors!");
     }
 
-    else if (playerInput === "paper" & computerSelection === "Rock") {
+    else if (playerInput === "paper" & computerSelection === "rock") {
         playerWin++;
         return ("You Win! Paper beats Rock!");
     }
 
-    else if (playerInput === "scissors" & computerSelection === "Paper") {
+    else if (playerInput === "scissors" & computerSelection === "paper") {
         playerWin++;
         return ("You win! Scissors beats paper!");
     }
 
-    else if (playerInput === "rock" & computerSelection === "Paper") {
+    else if (playerInput === "rock" & computerSelection === "paper") {
         cpuWin++;
         return ("You lose! Paper Beats Rock!");
     }
 
-    else if (playerInput === "paper" & computerSelection === "Scissors") {
+    else if (playerInput === "paper" & computerSelection === "scissors") {
         cpuWin++;
         return ("You lose! Scissors beats Paper!");
     }
 
-    else if (playerInput === "scissors" & computerSelection === "Rock") {
+    else if (playerInput === "scissors" & computerSelection === "rock") {
         cpuWin++;
         return ("You lose! Rock beats scissors!");
     }
